@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+    background-color: #ffffff;
+}
+/* _______________________ENCABEZADO____________________________- */
+.encabezado{
+    background-color: blue;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+.navegacion-link{
+    color: #ffffff;
+}
+.logotipo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu-navegacion{
+    display: flex;
+    margin-right: 40px;
+}
+.menu-navegacion-obj{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.menu-navegacion-link{
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.menu-navegacion-link:hover, .menu-navegacion-link_activo{
+    background-color: #034574;
+    transition: all .5s ease;
+}
+.hamburguesa{
+    color: #ffffff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px){
+    body{
+        padding-top: 70px;
+    }
+    .encabezado{
+        height: 60px;
+    }
+    .logotipo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    .menu-navegacion{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #2c3e50;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left .5s;
+    }
+    .menu-navegacion-obj{
+        line-height: 70px;
+    }
+    .menu-navegacion-link:hover, .menu-navegacion-link_activo{
+        background-color: none;
+        transition: all .5s ease;
+        color: #83c5f7;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    .menu-navegacion_mostrar{
+        left: 0;
+    }
+    .hamburguesa:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+/* _________________CUERPO____________________________________ */
+.cuerpo{
+    top: 80px;
+    width: 100%;
+}
+.presentacion{
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-shadow: 4px 4px 10px rgb(80, 79, 79);
+}
+.presentacion .seccion1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.acerca-imagen{
+    background-color: rgb(234, 248, 198);
+    border-radius: 50%;
+    margin: 10px;
+}
+.presentacion .seccion1 .acerca-imagen img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    box-shadow: 4px 4px 10px rgb(80, 79, 79);
+}
+.acerca-de h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    margin: 5px;
+}
+.acerca-de h2:hover{
+    color: #00ffff;
+    transition: all 2s ease;
+    font-weight: 700;
+    cursor: default;
+    padding-left: 10px;
+}
+.parrafo1{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 15px;
+}
+.parrafo1:hover{
+    color: #034574;
+    font-weight: bold;
+    cursor: default;
+    transform: scale(1.1);/*aumenta el tamaño del texto en un 10%*/
+    transition: all 1s ease;
+}
+.parrafo2{
+    border-radius: 30px;
+}
+.parrafo2:hover{
+    transition: all .5s ease;
+    font-weight: 600;
+    margin: auto;
+    background-color: #83c5f7;
+}
+.presentacion .seccion1 .acerca-imagen img:hover,.acerca-imagen:hover{
+    border-radius: 3%;
+    transition: all .5s ease;
+}
+@media (max-width: 768px){
+    .presentacion{
+        background-color: rgb(215, 144, 52);
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        box-shadow: 4px 4px 10px rgb(80, 79, 79);
+    }
+    .presentacion .seccion1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .acerca-imagen{
+        background-color: rgb(132, 100, 28);
+        border-radius: 100%;
+        margin: 15px;
+    }
+    .presentacion .seccion1 .acerca-imagen img{
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 15px;
+        box-shadow: 4px 4px 10px rgb(80, 79, 79);
+    }
+    .acerca-de h2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 45px;
+        margin: 5px;
+    }
+    .acerca-de h2:hover{
+        color: #41adad;
+        transition: all 2s ease;
+        font-weight: bold;
+        cursor: default;
+        padding-left: 15px;
+    }
+    .parrafo1{
+        font-weight: 600;
+        font-size: 20px;
+        margin: 15px;
+    }
+    .parrafo1:hover{
+        color: rgb(9, 9, 65);
+        cursor: default;
+        transform: scale(1.1);/*aumenta el tamaño del texto en un 10%*/
+        transition: all 1s ease;
+    }
+    .parrafo2{
+        border-radius: 50px;
+    }
+    .parrafo2:hover{
+        transition: all .5s ease;
+        font-weight: 600;
+        margin: 8px;
+        background-color: bisque;
+    }
+    .presentacion .seccion1 .acerca-imagen img:hover,.acerca-imagen:hover{
+        border-radius: 10%;
+        transition: all .5s ease;
+    }
+}
+/* ___________________TARJETAS____________________ */
+.trabajos{
+    background-color:rgb(53, 130, 203);
+    border-radius: 10px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: solid 2px rgb(6, 89, 110);
+    height: 100%;
+    padding: 20px 0px 20px;
+}
+.card-container{
+    background-color: #00ffff;
+    border-radius: 8px;
+}
+.card{
+    background-color: aqua;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgb(80, 79, 79);
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover{
+    background-color: cadetblue;
+    transition: all .5s ease;
+    .image-container img{
+        height: 240px;
+        transition: all .5s ease;
+    }
+    h2{
+        padding-top: 135px;
+        color: antiquewhite;
+        transition: all .5s ease;
+    }
+    .txt{
+        display: block;
+        color: #ffffff;
+        transition: all .7s ease;
+    }
+}
+.image-container{
+    border-radius: 5px;
+    height: 120px;
+}
+.image-container img{
+    border-radius: 8px 8px 0 0 ;
+    width: 100%;
+    height: 320px;
+}
+.card h2{
+
+    padding-top: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.txt{
+    height: 380px;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    color: rgb(182, 181, 181);
+}
+/* _____________________FOOTER - PIE DE PAGINA___________________ */
+.cont{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer{
+    background-color: #24262b;
+    padding: 80px 0;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-links ul li a {
+    font-size: 18px;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+.footer-links ul li a:hover{
+    color: #ffffff;
+    padding-left: 6px;
+}
+.redes-sociales a{
+    display: inline-block;
+    min-height: 4px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+.redes-sociales a.hover{
+    background-color: #00c3ff;
+}
+@media (max-width: 991px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
